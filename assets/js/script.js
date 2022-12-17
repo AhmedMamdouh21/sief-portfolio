@@ -83,6 +83,10 @@ $(".circle-animation").each(function () {
 });
 
 // Scroll To Top
+// var Scrollbar = window.Scrollbar;
+
+// Scrollbar.init(document.querySelector(".scrollbar"));
+
 if ($(".backToTop").length) {
   $(".backToTop").click(function (e) {
     $("html, body").animate(
@@ -91,5 +95,36 @@ if ($(".backToTop").length) {
       },
       1200
     );
+
+    // const scroller = document.querySelector(".scrollbar");
+    // const bodyScrollBar = Scrollbar.init(scroller, {
+    //   damping: 0.05,
+    //   renderByPixels: true,
+    //   continuousScrolling: true,
+    //   alwaysShowTracks: true,
+    // });
+    // bodyScrollBar.scrollTo(0, 0, 1200);
   });
+}
+
+if ($(".container-filter").length) {
+  var $filterSelect = $("#FilterSelect"),
+    // $sortSelect = $("#SortSelect"),
+    $container = $(".container-filter");
+
+  $container.mixItUp();
+
+  $filterSelect.on("change", function () {
+    $container.mixItUp("filter", this.value);
+    $("html, body").animate(
+      {
+        scrollTop: $(".marquee").offset().top,
+      },
+      1200
+    );
+  });
+}
+
+if ($("select").length) {
+  $("select").selectpicker();
 }
