@@ -244,7 +244,7 @@ body:not(#home) .navbar .display-time {
 
 @media (max-width: 575.98px) {
   .padding-top {
-    padding-top: 100px;
+    padding-top: 130px;
   }
 }
 
@@ -1339,6 +1339,12 @@ footer .social-media .icon:hover {
   position: absolute;
   width: 100% !important;
   height: 100% !important;
+}
+
+@media (max-width: 1199.98px) {
+  .responsive-embed {
+    height: 350px;
+  }
 }
 
 .inner-works {

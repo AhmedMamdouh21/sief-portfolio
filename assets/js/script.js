@@ -67,6 +67,11 @@ if ($(".video-works").length) {
       $("video", this).get(0).pause();
       $("video", this).get(0).load();
     });
+  } else {
+    $(".work-details.video-works video").each(function () {
+      var playVideo = this;
+      playVideo.play();
+    });
   }
 }
 

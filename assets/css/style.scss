@@ -236,7 +236,7 @@ body {
     padding-top: 70px;
 
     @media (max-width: 575.98px) {
-        padding-top: 100px;
+        padding-top: 130px;
     }
 }
 
@@ -1359,6 +1359,10 @@ footer {
         position: absolute;
         width: 100%!important;
         height: 100%!important;
+    }
+
+    @media (max-width: 1199.98px) {
+        height: 350px;
     }
 }
 .inner-works {
