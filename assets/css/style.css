@@ -920,10 +920,6 @@ footer .social-media .icon:hover {
 }
 
 /*** Contact US ***/
-.contact-us .min-h {
-  min-height: calc(100vh - 70px);
-}
-
 .contact-us .title {
   position: relative;
   -webkit-transition: all 0.3s ease-in-out;
