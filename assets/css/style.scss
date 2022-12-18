@@ -191,7 +191,7 @@ body {
 
     @media (max-width: 575.98px) {
         width: 100%;
-        padding: 0 15px;
+        padding-left: 15px;
     }
 }
 
@@ -1341,6 +1341,42 @@ footer {
             color: $black;
         }
     }
+
+    /*** Swiper Images ***/
+
+    .swiper_thumbs {
+       
+        @media (min-width: 1200px)  {
+            height: 100vh;
+        }
+    
+        @media (max-width: 1199.98px) {
+            height: 100px;
+        }
+
+        .swiper-slide {
+            cursor: pointer;
+        }
+      }
+    
+
+      .slider-images {
+        @media (max-width: 1199.98px) {
+            padding-top: 1rem;
+            margin: 0 auto;
+        }
+        .swiper_images {
+            @media (min-width: 1200px)  {
+                height: 100%;
+            }
+        
+            @media (max-width: 1199.98px) {
+                height: 250px;
+            }
+         
+        }
+      }
+      
 }
 
 
@@ -1377,3 +1413,43 @@ footer {
         }
     }
 }
+
+
+
+/*** Start Cursor ***/
+.cursor-custom {
+    &.filter {
+    .cursor-dot-outline {
+        backdrop-filter: invert(100%);
+    }
+    }
+    .cursor-dot,
+    .cursor-dot-outline {
+        pointer-events: none;
+        position: absolute;
+        z-index: 999;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        transition: opacity 0.3s ease-in-out,
+            transform 0.3s ease-in-out;
+    }
+    
+    .cursor-dot {
+        $size: 8px;
+        width: $size;
+        height: $size;
+        background-color: $black;
+    }
+    
+    .cursor-dot-outline {
+        $size: 40px;
+        width: $size;
+        height: $size;
+        background-color: rgba($white, 0.5);
+    }
+}
+
+/*** End Cursor ***/
