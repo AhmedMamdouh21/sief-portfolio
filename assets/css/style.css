@@ -44,7 +44,7 @@ body {
 
 @media (max-width: 575.98px) {
   body {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -276,13 +276,13 @@ body:not(#home) .navbar .display-time {
 /*** Titles ***/
 @media (min-width: 1600px) {
   .main-title {
-    font-size: 120px;
+    font-size: 130px;
   }
 }
 
 @media (min-width: 1200px) and (max-width: 1599.98px) {
   .main-title {
-    font-size: 100px;
+    font-size: 115px;
   }
 }
 
@@ -318,7 +318,7 @@ body:not(#home) .navbar .display-time {
 
 @media (max-width: 575.98px) {
   .section-title {
-    font-size: 30px;
+    font-size: 33px;
   }
 }
 
@@ -392,7 +392,7 @@ body:not(#home) .navbar .display-time {
 
 @media (max-width: 575.98px) {
   .description-de {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -438,7 +438,7 @@ textarea {
 
 @media (max-width: 575.98px) {
   .btn_main {
-    padding: 0.35rem 1.5rem;
+    padding: 0.35rem 1rem;
   }
 }
 
@@ -448,7 +448,7 @@ textarea {
 }
 
 .btn_main.white:hover {
-  font-family: "fontExtraBold";
+  text-shadow: 0px 0px 1px #1E1E1E;
   text-decoration: underline;
 }
 
@@ -460,6 +460,12 @@ textarea {
 .navbar .navbar-nav .nav-item .nav-link {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 575.98px) {
+  .navbar .navbar-nav .nav-item .nav-link {
+    font-size: 14px;
+  }
 }
 
 .navbar .navbar-nav .nav-item .nav-link:hover, .navbar .navbar-nav .nav-item .nav-link.active {
@@ -483,6 +489,20 @@ textarea {
   height: 10px;
   background-color: #DA3333;
   border-radius: 50%;
+  -webkit-animation: blinker 1s linear infinite;
+          animation: blinker 1s linear infinite;
+}
+
+@-webkit-keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
 
 /*** Start Hero ***/
@@ -527,7 +547,7 @@ textarea {
 
 @media (max-width: 575.98px) {
   .hero .hero-title .ball {
-    width: 100px;
+    width: 80px;
     margin-left: auto;
     margin-bottom: -30px;
   }
@@ -562,9 +582,27 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
+@media (max-width: 575.98px) {
+  .hero .social-media li .icon {
+    font-size: 14px;
+  }
+}
+
 .hero .social-media li .icon:hover {
   font-family: "fontExtraBold";
   text-decoration: underline;
+}
+
+.hero .text-rotate {
+  color: #FFFFFF;
+  font-size: 10px;
+  position: absolute;
+  top: 50%;
+  right: 2.5%;
+  -webkit-transform: rotate(180deg) translateY(-50%);
+          transform: rotate(180deg) translateY(-50%);
+  -webkit-transform-origin: top;
+          transform-origin: top;
 }
 
 .marquee-swiper,
@@ -852,6 +890,7 @@ footer .circle-animation {
   footer .circle-animation {
     height: 85px;
     width: 85px;
+    display: none;
   }
 }
 
@@ -889,7 +928,6 @@ footer .social-media .icon:hover {
   position: relative;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  display: block;
   text-decoration: none;
   color: #1E1E1E;
 }
@@ -897,6 +935,13 @@ footer .social-media .icon:hover {
 @media (min-width: 1200px) {
   .contact-us .title {
     letter-spacing: 21.6px;
+    display: block;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .contact-us .title {
+    display: inline-block;
   }
 }
 
@@ -960,7 +1005,7 @@ footer .social-media .icon:hover {
 
 /*** BIO ***/
 .bio .pic {
-  height: 80vh;
+  height: 500px;
   position: relative;
 }
 
@@ -1008,7 +1053,7 @@ footer .social-media .icon:hover {
 }
 
 .awards-selection .list-awards-selection li:not(:last-child) {
-  border-bottom: 2px solid rgba(30, 30, 30, 0.4);
+  border-bottom: 1px solid #1E1E1E;
 }
 
 .awards-selection .list-awards-selection li:last-child {

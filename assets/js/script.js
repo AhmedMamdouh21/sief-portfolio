@@ -3,7 +3,7 @@ if ($(".display-time").length) {
   // Time
   function showTime() {
     let time = new Date();
-    displayTime.innerText = time.toLocaleTimeString("it-IT", { hour12: false });
+    displayTime.innerText = time.toLocaleTimeString("en-US", { hour12: false });
     setTimeout(showTime, 1000);
   }
 
@@ -21,7 +21,7 @@ if ($(".hero").length) {
     speed: 800,
     autoplay: {
       disableOnInteraction: false,
-      delay: 5000,
+      delay: 2000,
     },
   });
 }
@@ -30,7 +30,7 @@ if ($(".marquee-swiper").length) {
   let swiperMarquee = new Swiper(".marquee-swiper", {
     spaceBetween: 0,
     centeredSlides: true,
-    speed: 4000,
+    speed: 2000,
     autoplay: {
       delay: 1,
     },
@@ -122,7 +122,7 @@ if ($(".container-filter").length) {
     $container.mixItUp("filter", this.value);
     $("html, body").animate(
       {
-        scrollTop: $(".marquee").offset().top,
+        scrollTop: 0,
       },
       1200
     );
