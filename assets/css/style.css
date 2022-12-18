@@ -988,7 +988,7 @@ footer .social-media .icon:hover {
 }
 
 .contact-us .contact-info li:not(:last-child) {
-  border-bottom: 2px solid rgba(30, 30, 30, 0.4);
+  border-bottom: 1px solid #1E1E1E;
 }
 
 .contact-us .contact-info li:last-child {
@@ -1464,6 +1464,12 @@ footer .social-media .icon:hover {
   width: 40px;
   height: 40px;
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 1199.98px) {
+  .cursor-custom {
+    display: none;
+  }
 }
 
 /*** End Cursor ***/

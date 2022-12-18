@@ -956,7 +956,7 @@ footer {
     .contact-info {
         li {
             &:not(:last-child) {
-                border-bottom: 2px solid rgba($color: $black, $alpha: 0.4);
+                border-bottom: 1px solid $black;
             }
 
             padding:1rem 0;
@@ -1477,6 +1477,10 @@ footer {
         width: $size;
         height: $size;
         background-color: rgba($white, 0.5);
+    }
+
+    @media  (max-width: 1199.98px) {
+        display: none;
     }
 }
 

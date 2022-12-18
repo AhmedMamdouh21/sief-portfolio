@@ -342,5 +342,7 @@ if ($(".cursor-dot").length) {
       }
     },
   };
-  cursorCustom.init();
+  if (window.outerWidth >= 1200) {
+    cursorCustom.init();
+  }
 }
