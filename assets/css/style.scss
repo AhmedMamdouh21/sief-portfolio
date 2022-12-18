@@ -69,7 +69,19 @@ body {
     @media (max-width: 575.98px) {
         font-size: 12px;
     }
-
+    &:before {
+        animation: grain 8s steps(10) infinite;
+        background-image: url('../img/bg-noise.png');
+        content: "";
+        height: 300%;
+        left: -50%;
+        opacity: .4;
+        position: fixed;
+        top: -100%;
+        width: 300%;
+        pointer-events: none;
+        z-index: 999;
+    }
     &#home {
         .navbar-brand {
             .logo-black {
@@ -113,6 +125,49 @@ body {
             }
         }
     }
+    @keyframes grain {
+
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+    
+        10% {
+          transform: translate(-5%, -10%);
+        }
+    
+        20% {
+          transform: translate(-15%, 5%);
+        }
+    
+        30% {
+          transform: translate(7%, -25%);
+        }
+    
+        40% {
+          transform: translate(-5%, 25%);
+        }
+    
+        50% {
+          transform: translate(-15%, 10%);
+        }
+    
+        60% {
+          transform: translate(15%, 0%);
+        }
+    
+        70% {
+          transform: translate(0%, 15%);
+        }
+    
+        80% {
+          transform: translate(3%, 35%);
+        }
+    
+        90% {
+          transform: translate(-10%, 10%);
+        }
+      }
 }
 
 /*** Container ***/
@@ -123,6 +178,16 @@ body {
         right: auto;
         left: auto;
     }
+
+    @media (max-width: 575.98px) {
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+
+.container-start {
+    width: 97.5%;
+    margin-left: auto;
 
     @media (max-width: 575.98px) {
         width: 100%;
@@ -143,6 +208,8 @@ body {
         padding: 0 15px;
     }
 }
+
+
 
 
 .my-section {
@@ -235,6 +302,27 @@ body {
 
     @media (max-width: 575.98px) {
         font-size: 30px;
+    }
+}
+
+.title-sm {
+
+    @media (min-width: 1600px) {
+        font-size: 24px;
+    }
+
+    @media (min-width: 1200px) and (max-width: 1599.98px) {
+        font-size: 22px;
+    }
+
+
+    @media (min-width: 576px) and (max-width: 1199.98px) {
+        font-size: 18px;
+    }
+
+
+    @media (max-width: 575.98px) {
+        font-size: 14px;
     }
 }
 
@@ -1231,4 +1319,61 @@ footer {
 
     }
 
+}
+
+.responsive-embed {
+    position: relative;
+    // padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    // padding-top: 25px;
+
+    height: 80vh;
+    iframe {
+        position: absolute;
+        width: 100%!important;
+        height: 100%!important;
+    }
+}
+.inner-works {
+    .more-works {
+        border-bottom: 4px solid $black;
+        padding-bottom: 1rem;
+        a {
+            color: $black;
+        }
+    }
+}
+
+
+/*** See Also ***/
+.see-also {
+    .swiper-see-also {
+        overflow: hidden;
+        .swiper-slide {
+            a {
+                text-decoration: none;
+                color: $black;
+                .img {
+                   
+                    overflow: hidden;
+                    img {
+                        transition: $transitionFast;
+                        @media (min-width: 1200px)  {
+                            height: 350px;
+                        }
+                    
+                        @media (max-width: 1199.98px) {
+                            height: 250px;
+                        }
+                    }
+                }
+                @media (min-width: 1200px)  {
+                    &:hover {
+                       img {
+                        transform: scale3d(1.3, 1.3, 1);
+                       }
+                    }
+                }
+            }
+        }
+    }
 }
