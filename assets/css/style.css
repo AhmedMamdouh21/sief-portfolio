@@ -957,9 +957,9 @@ footer .social-media .icon:hover {
 @media (max-width: 1199.98px) {
   .contact-us .min-h {
     min-height: calc(100vh - 130px);
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -1535,7 +1535,7 @@ footer .social-media .icon:hover {
 
 @media (max-width: 1199.98px) {
   .inner-works .slider-images .swiper_images {
-    height: 250px;
+    height: 400px;
   }
 }
 
@@ -1634,9 +1634,9 @@ footer .social-media .icon:hover {
 @media (max-width: 1199.98px) {
   .not-found .min-h {
     min-height: calc(100vh - 130px);
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
