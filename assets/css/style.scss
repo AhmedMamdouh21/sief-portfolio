@@ -467,10 +467,13 @@ textarea {
             margin-left: 1rem;
         }
         .nav-item {
+            @media (max-width: 575.98px) {
+               margin-right: 1.5rem !important;
+            }
             .nav-link {
                 transition: $transitionFast;
                 @media (max-width: 575.98px) {
-                    font-size: 14px;
+                    font-size: 18px;
                 }
                 &:hover,
                 &.active {
@@ -484,6 +487,7 @@ textarea {
     .display-time {
         position: relative;
         padding-left: 15px;
+        margin-top: 0.5rem;
         @media (min-width: 1200px)  {
             margin-right: 2rem !important;
         }
@@ -699,6 +703,9 @@ textarea {
                     @media (min-width: 1200px) {
                         transform: translate3d(0, 5px, 0);
                         opacity: 0;
+                    }
+                    @media (max-width: 1199.98px) {
+                        margin-right: 2rem !important;
                     }
                 }
 
@@ -1450,6 +1457,10 @@ footer {
 
     .info {
         .details {
+            @media (max-width: 1199.98px) {
+               margin-top: 2rem !important;
+               margin-bottom: 2rem !important;
+            }
             .section-title {
                 @media (min-width: 992px) {
                     margin-bottom: 2.5rem !important;

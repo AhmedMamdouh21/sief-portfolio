@@ -151,12 +151,12 @@ if ($(".container-filter").length) {
 
 if ($(".swiper-see-also").length) {
   let swiperSeeAlso = new Swiper(".swiper-see-also", {
+    loop: true,
     speed: 800,
     autoplay: {
       disableOnInteraction: false,
       delay: 2000,
     },
-    loop: true,
     breakpoints: {
       0: {
         slidesPerView: 1.5,
