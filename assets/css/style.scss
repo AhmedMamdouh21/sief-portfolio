@@ -235,7 +235,7 @@ body {
 .padding-top {
     padding-top: 70px;
 
-    @media (max-width: 575.98px) {
+    @media (max-width: 1199.98px) {
         padding-top: 130px;
     }
 }
@@ -899,6 +899,10 @@ footer {
         @media (min-width: 1200px) {
             min-height: calc(100vh - 70px);
             justify-content: space-between;
+        }
+          @media (max-width: 1199.98px){
+            min-height: calc(100vh - 130px);
+            justify-content: flex-end;
         }
     }
     // .min-h {
@@ -1587,7 +1591,7 @@ footer {
             min-height: calc(100vh - 70px);
         }
 
-        @media (max-width: 575.98px){
+        @media (max-width: 1199.98px){
             min-height: calc(100vh - 130px);
             justify-content: flex-end;
         }

@@ -1,15 +1,3 @@
-if ($(".display-time").length) {
-  const displayTime = document.querySelector(".display-time");
-  // Time
-  function showTime() {
-    let time = new Date();
-    displayTime.innerText = time.toLocaleTimeString("en-US", { hour12: false });
-    setTimeout(showTime, 1000);
-  }
-
-  showTime();
-}
-
 if ($(".hero").length) {
   let swiperHero = new Swiper(".hero-swiper", {
     loop: true,
@@ -254,22 +242,6 @@ if ($(".cursor-dot").length) {
       this.animateDotOutline();
     },
 
-    //     updateCursor: function(e) {
-    //         var self = this;
-
-    //         console.log(e)
-
-    //         // Show the cursor
-    //         self.cursorVisible = true;
-    //         self.toggleCursorVisibility();
-
-    //         // Position the dot
-    //         self.endX = e.pageX;
-    //         self.endY = e.pageY;
-    //         self.$dot.style.top = self.endY + 'px';
-    //         self.$dot.style.left = self.endX + 'px';
-    //     },
-
     setupEventListeners: function () {
       var self = this;
 
@@ -376,5 +348,45 @@ if ($(".cursor-dot").length) {
   };
   if (window.outerWidth >= 1200) {
     cursorCustom.init();
+  }
+}
+
+if ($(".display-time").length) {
+  // const displayTime = document.querySelector(".display-time");
+  // // Time
+  // function showTime() {
+  //   let time = new Date();
+  //   displayTime.innerText = time.toLocaleTimeString("en-US", { hour12: false });
+  //   setTimeout(showTime, 1000);
+  // }
+
+  // showTime();
+  clockUpdate();
+  setInterval(clockUpdate, 1000);
+  function clockUpdate() {
+    var date = new Date();
+    function addZero(x) {
+      if (x < 10) {
+        return (x = "0" + x);
+      } else {
+        return x;
+      }
+    }
+
+    function twelveHour(x) {
+      if (x > 12) {
+        return (x = x - 12);
+      } else if (x == 0) {
+        return (x = 12);
+      } else {
+        return x;
+      }
+    }
+
+    var h = addZero(twelveHour(date.getHours()));
+    var m = addZero(date.getMinutes());
+    var s = addZero(date.getSeconds());
+
+    $(".display-time").text(h + ":" + m + ":" + s);
   }
 }

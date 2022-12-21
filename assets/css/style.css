@@ -242,7 +242,7 @@ body:not(#home) .navbar .display-time {
   padding-top: 70px;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 1199.98px) {
   .padding-top {
     padding-top: 130px;
   }
@@ -940,6 +940,15 @@ footer .social-media .icon:hover {
   }
 }
 
+@media (max-width: 1199.98px) {
+  .contact-us .min-h {
+    min-height: calc(100vh - 130px);
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
 .contact-us .title {
   position: relative;
   -webkit-transition: all 0.3s ease-in-out;
@@ -1601,7 +1610,7 @@ footer .social-media .icon:hover {
   }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 1199.98px) {
   .not-found .min-h {
     min-height: calc(100vh - 130px);
     -webkit-box-pack: end;
